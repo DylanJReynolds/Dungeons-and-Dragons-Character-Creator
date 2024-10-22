@@ -1,0 +1,90 @@
+Barbarian
+Hit Dice: 1d12
+Proficient Saving Throws: Strength, Constitution
+Armour Proficiencies: Light armour, medium armour, heavy armour, shields
+Tool Proficiencies: None
+Skill Proficiencies: Animal Handling, Athletics, Intimidation, Nature, Perception, Survival
+
+Bard
+Hit Dice: 1d8
+Proficient Saving Throws: Dexterity, Charisma
+Armour Proficiencies: Light armour
+Tool Proficiencies:
+Skill Proficiencies: 
+
+Blood Hunter
+Hit Dice: 1d10
+Proficient Saving Throws: Dexterity, Intelligence
+Armour Proficiencies: Light armour, medium armour
+Tool Proficiencies:
+Skill Proficiencies:
+
+Cleric
+Hit Dice: 1d8
+Proficient Saving Throws: Wisdom, Charisma
+Armour Proficiencies: Light armour, medium armour, heavy armour, shields
+Tool Proficiencies:
+Skill Proficiencies:
+
+Druid
+Hit Dice: 1d8
+Proficient Saving Throws: Intelligence, Wisdom
+Armour Proficiencies: Light armour, medium armour, shields (non-metal)
+Tool Proficiencies:
+Skill Proficiencies:
+
+Fighter
+Hit Dice: 1d10
+Proficient Saving Throws: Strength, Constitution
+Armour Proficiencies: Light armour, medium armour, heavy armour, shields
+Tool Proficiencies:
+Skill Proficiencies:
+
+Monk
+Hit Dice: 1d8
+Proficient Saving Throws: Strength, Dexterity
+Armour Proficiencies: None
+Tool Proficiencies:
+Skill Proficiencies:
+
+Paladin
+Hit Dice: 1d10
+Proficient Saving Throws: Wisdom, Charisma
+Armour Proficiencies: Light armour, medium armour, heavy armour, shields
+Tool Proficiencies:
+Skill Proficiencies:
+
+Ranger
+Hit Dice: 1d10
+Proficient Saving Throws: Strength, Dexterity
+Armour Proficiencies: Light armour, medium armour, shields
+Tool Proficiencies:
+Skill Proficiencies:
+
+Rogue
+Hit Dice: 1d8
+Proficient Saving Throws: Dexterity, Intelligence
+Armour Proficiencies: Light armour
+Tool Proficiencies:
+Skill Proficiencies:
+
+Sorcerer
+Hit Dice: 1d6
+Proficient Saving Throws: Constitution, Charisma
+Armour Proficiencies: None
+Tool Proficiencies:
+Skill Proficiencies:
+
+Warlock
+Hit Dice: 1d8
+Proficient Saving Throws: Wisdom, Charisma
+Armour Proficiencies: Light armour
+Tool Proficiencies:
+Skill Proficiencies:
+
+Wizard
+Hit Dice: 1d6
+Proficient Saving Throws: Intelligence, Wisdom
+Armour Proficiencies: None
+Tool Proficiencies:
+Skill Proficiencies:

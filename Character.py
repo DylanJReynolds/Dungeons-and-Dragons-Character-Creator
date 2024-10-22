@@ -1,4 +1,24 @@
 class Character:
+    skill_to_attribute = {
+            "Acrobatics": "Dexterity",
+            "Animal Handling": "Wisdom",
+            "Arcana": "Intelligence",
+            "Athletics": "Strength",
+            "Deception": "Charisma",
+            "History": "Intelligence",
+            "Insight": "Wisdom",
+            "Investigation": "Intelligence",
+            "Medicine": "Wisdom",
+            "Nature": "Intelligence",
+            "Perception": "Wisdom",
+            "Performance": "Charisma",
+            "Persuasion": "Charisma",
+            "Religion": "Intelligence",
+            "Sleight of Hand": "Dexterity",
+            "Stealth": "Dexterity",
+            "Survival": "Wisdom"
+        }
+    
     def __init__(self, name, race, character_class, level=1, experience_points=0, health_points=10, armour_class=10):
         self.name = name
         self.race = race
@@ -41,38 +61,28 @@ class Character:
 
         self.equiptment = []
 
+        self.proficient_skills = set()
+
     def update_attribute(self, attribute, value):
         if attribute in self.attributes:
             self.attributes[attribute] = value
         else:
             print("Attribute not found")
+    
+    def add_proficiency(self, skill):
+        if skill in self.skills:
+            self.proficient_skills.add(skill)
+            self.update_skills_based_on_attributes()
+        else:
+            print(f"Skill '{skill}' not found.")
 
     def update_skills_based_on_attributes(self):
-        skill_to_attribute = {
-            "Acrobatics": "Dexterity",
-            "Animal Handling": "Wisdom",
-            "Arcana": "Intelligence",
-            "Athletics": "Strength",
-            "Deception": "Charisma",
-            "History": "Intelligence",
-            "Insight": "Wisdom",
-            "Investigation": "Intelligence",
-            "Medicine": "Wisdom",
-            "Nature": "Intelligence",
-            "Perception": "Wisdom",
-            "Performance": "Charisma",
-            "Persuasion": "Charisma",
-            "Religion": "Intelligence",
-            "Sleight of Hand": "Dexterity",
-            "Stealth": "Dexterity",
-            "Survival": "Wisdom"
-        }
-
-        for skill, attribute in skill_to_attribute.items():
+        for skill, attribute in self.skill_to_attribute.items():
             self.skills[skill] = (self.attributes[attribute] - 10) // 2
             if skill in self.proficient_skills:
                 self.skills[skill] += self.proficiency_bonus
 
+    
         
 
 
