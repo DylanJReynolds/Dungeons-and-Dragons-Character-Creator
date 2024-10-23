@@ -1,9 +1,21 @@
 Dwarf
+Size:
+Speed:
+Tool Proficiencies:
+Skill Proficiencies:
+
 Elf
+
 Halfling
+
 Human
+
 Dragonborn
+
 Gnome
+
 Half-Elf
+
 Half-Orc
+
 Tiefling
