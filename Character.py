@@ -1,4 +1,7 @@
+import dice
 import json
+import random
+import re
 
 class Character:
     skill_to_attribute = {
@@ -95,7 +98,7 @@ class Character:
             "Survival": 0
         }
 
-        self.equiptment = []
+        self.equipment = []
 
         self.equipped = []
 
@@ -224,8 +227,17 @@ class Character:
             except ValueError:
                 print("Invalid input. Please enter a number.")
 
+        self.set_ability_scores()
+
+
     def update_character(self):
-        pass
+        with open("classes.json", "r", encoding="utf-8") as file:
+            data = json.load(file)
+            hit_dice = data[self.character_class]["Class Features"]["Hit Points"]["content"][0]
+        
+        dice_pattern = re.search(r"\d+d\d+", hit_dice)
+        hit_dice = dice_pattern.group()
+        print(f"Hit Dice: {hit_dice}")
 
     def modify_health(self):
         pass
@@ -252,5 +264,46 @@ class Character:
             print(f"{ability}: {score} (Modifier: {mod:+})")
         print(f"{'-'*30}\n")
 
+    def set_ability_scores(self):
+        print("How would you like to determine ability scores?")
+        print("Note: Your racial bonuses will be added to these scores.")
+        print("1. Standard Array")
+        print("2. Roll 4d6 and drop the lowest")
+        print("3. Manual Entry")
+        print("4. Point Buy")
+        print("5. Random")
+
+        try:
+            choice = int(input("Enter the number corresponding to the method: "))
+            if choice == 1:
+                ability_scores = [15, 14, 13, 12, 10, 8]
+            elif choice == 2:
+                ability_scores = []
+                for i in range(6):
+                    ability_scores.append(sum(sorted(dice.roll("4d6")[1:])))
+            elif choice == 3:
+                ability_scores = []
+                for i in range(6):
+                    while True:
+                        try:
+                            score = int(input(f"Enter the score for ability {i+1}: "))
+                            if 3 <= score <= 18:
+                                ability_scores.append(score)
+                                break
+                            else:
+                                print("Invalid score. Please enter a number between 3 and 18.")
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
+            elif choice == 4:
+                ability_scores = [8, 8, 8, 8, 8, 8]
+                print("Point Buy system not yet implemented.")
+            elif choice == 5:
+                ability_scores = [random.randint(3, 18) for i in range(6)]
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+        
+        
+
     #def level_up(self):
     #def modify_experience_points(self):
+    #Spell System
